@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>DemoTagger</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.css" >    
+	<script type='text/javascript' src='http://code.jquery.com/jquery-2.0.0b1.js'></script>
+    <script type='text/javascript' src='/static/bootstrap/js/tag.js'></script>
+    <script type='text/javascript'>
+        var workspace_id = {{workspace_id}};
+        var user_id = {{user_id.pk}};
+        var media_item_id = {{media_items.0.id}};
+        var frame_times = {{frame_times|safe}}
+    </script>
+  <meta name="boolyrun" content="1359837780044-2951"><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      	<h1>Project: </h1>
+  		<div class="row">Presentation: {{ sample_preso }}</div>
+        <div class="row">
+        <div id="video_box">
+            <video width="640" height="480" id="video" controls>
+                <source src="{{ MEDIA_URL }}{{ media_items.0.media_file}}" type="video/mp4"/>
+            </video>
+            <div id="new_tag"/>
+        </div>
+        <div id="video_controls">
+            <div id="play"></div>
+            <div id="time_slider"></div>
+        </div>
+        <div id="comment_section">
+            <textarea id="new_comment"></textarea>
+            <input type="submit" value="Add Comment" id="add_comment"></input>
+            <div id="comments">
+                {% for visual_tag in visual_tags %}
+                    {% for comment in visual_tag.comments %}
+                        <p>{{comment.content}}</p>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+
+<footer>
+	<p>© Company 2013</p>
+</footer>
+</body></html>

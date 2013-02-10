@@ -1,0 +1,33 @@
+#video_box {
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.grouping-bar {
+	background: #f9f9f9;
+	padding: 5px;
+	margin: 8px 0;
+}
+
+#video_box video {
+}
+
+#video_box .tag_box {
+  position: absolute;
+  border:1px solid yellow;
+}
+
+#video_box #new_tag {
+  position: absolute;
+  border:1px solid red;
+}
+
+#comments {
+  clear: both;
+}
