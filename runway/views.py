@@ -62,27 +62,7 @@ def index(request):
 
 @render_with('sample_preso2.html')
 def sample_preso(request, workspace_index, preso_index):
-    user_profile = request.user.get_profile()
-    member = mw_models.WorkspaceMembership.objects.filter(user_profile=user_profile, workspace=workspace_index)
-    if not len(member):
-        return HttpResponse("Not your workspace")
-    sample_preso = mw_models.SamplePresentation.objects.get(workspace=workspace_index,
-                                                            pk=preso_index)
-    media_items = mw_models.MediaItem.objects.filter(sample_presentation=preso_index)
-
-    media_item = media_items[0]
-
-    frame_times = mw_models.VideoFrameContext.objects.filter(media_item=media_item)
-    frame_times = json.dumps([{"id": frame_time.id, "time": frame_time.frame_time} \
-                    for frame_time in frame_times])
-
-    return {
-        "workspace_id": workspace_index,
-        "user_id": user_profile,
-        "sample_preso": sample_preso,
-        "media_items": media_items,
-        "frame_times": frame_times
-    }
+    return {}
 
 @render_with('media_item.html')
 def media_item(request, workspace_index, mi_index):
