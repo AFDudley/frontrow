@@ -72,7 +72,12 @@
 			</video>
 		</div>
 	        <div class="span6">
+	        {% for look in looks %}
+	        <div style="display:none;" class="lookts-{{look.0}}">
 			<img src="/media/elle-saint-laurent-spring-2013-rtw-01-de-lg.jpg" height="261" />
+			{{look.1.photographer}}
+			</div>
+			{% endfor %}
 		</div>
         </div>
 	<div class="row">

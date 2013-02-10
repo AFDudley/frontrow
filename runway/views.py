@@ -62,7 +62,34 @@ def index(request):
 
 @render_with('sample_preso2.html')
 def sample_preso(request, workspace_index, preso_index):
-    return {}
+    looks =     {
+    14: {"num": 1, "img":"/media/elle-saint-laurent-spring-2013-rtw-01-de-lg.jpg", 
+        "model_name": "Julia Nobis", "photographer": "Alessandro Lucioni"},
+    20: {"num": 2, "img":"/media/elle-saint-laurent-spring-2013-rtw-02-de-lg.jpg", 
+         "model_name": "Melissa Stasiuk", "photographer": "Alessandro Lucioni"},
+    28: {"num": 3, "img":"/media/elle-saint-laurent-spring-2013-rtw-03-de-lg.jpg", 
+         "model_name": "Edie Campbell", "photographer": "Alessandro Lucioni"},
+    36: {"num": 4, "img":"/media/elle-saint-laurent-spring-2013-rtw-04-de-lg.jpg", 
+         "model_name": "Georgia Hilmer", "photographer": "Alessandro Lucioni"},
+    43: {"num": 5, "img":"/media/elle-saint-laurent-spring-2013-rtw-05-de-lg.jpg", 
+         "model_name": "Saska de Brauw", "photographer": "Alessandro Lucioni"},
+    53: {"num": 6, "img":"/media/elle-saint-laurent-spring-2013-rtw-06-de-lg.jpg", 
+         "model_name": "Linn Arvidsson", "photographer": "Alessandro Lucioni"},
+    60: {"num": 7, "img":"/media/elle-saint-laurent-spring-2013-rtw-07-de-lg.jpg", 
+         "model_name": "Katharina Korbjuhn", "photographer": "Alessandro Lucioni"},
+    69: {"num": 8, "img":"/media/elle-saint-laurent-spring-2013-rtw-08-de-lg.jpg", 
+         "model_name": "Linn Arvidsson", "photographer": "Alessandro Lucioni"},
+    76: {"num": 9, "img":"/media/elle-saint-laurent-spring-2013-rtw-09-de-lg.jpg", 
+         "model_name": "Hanne Gaby Odiele", "photographer": "Alessandro Lucioni"},
+    84: {"num": 10, "img":"/media/elle-saint-laurent-spring-2013-rtw-10-de-lg.jpg", 
+         "model_name": "Melissa Stasiuk", "photographer": "Alessandro Lucioni"},
+    90: {"num": 11, "img":"/media/elle-saint-laurent-spring-2013-rtw-12-de-lg.jpg", 
+         "model_name": "Edie Campbel", "photographer": "Alessandro Lucioni"},
+    99: {"num": 12, "img":"/media/elle-saint-laurent-spring-2013-rtw-13-de-lg.jpg", 
+         "model_name": "Julia Nobis", "photographer": "Alessandro Lucioni"}}
+    looks_tuples = tuple([(k, v) for k, v in looks.items()])
+
+    return {"looks": looks_tuples}
 
 @render_with('media_item.html')
 def media_item(request, workspace_index, mi_index):

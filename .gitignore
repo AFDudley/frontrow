@@ -1,6 +1,7 @@
 ._*
 *.pyc
 *.mov
+*.mp4
 localsettings.py
 .project
 .pydevproject
