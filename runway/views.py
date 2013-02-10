@@ -3,7 +3,7 @@ from utilities.decorators import render_with
 from datetime import datetime, timedelta
 from django.views.decorators.csrf import csrf_exempt
 import json
-import media_wkf.models as mw_models
+import runway.models as rw_models
 
 from django.shortcuts import render_to_response
 from django.contrib.auth import authenticate, login

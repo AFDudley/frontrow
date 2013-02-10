@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', rw_views.index, name='rw_index'),
-    url(r'^runway/', include('frontrow.runway.urls')),
+    #url(r'^runway/', include('frontrow.runway.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
