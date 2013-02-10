@@ -144,8 +144,8 @@
 	      console.log("hey" + vTime + " next " + tsNext);
 	      if (vTime > tsNext) {
 		      console.log("changing");
-		      $(".lookts-" + tsNext).show();
-		      $(".lookts-" + tsCurrent).hide();
+		      $(".lookts-" + tsNext).fadeIn();
+		      $(".lookts-" + tsCurrent).fadeOut();
 		      tsCounter = tsCounter + 1;
 		      tsCurrent = tsNext;
 		      tsNext = tsList[tsCounter];
@@ -221,7 +221,7 @@
 	        {% for look in looks %}
 	        <div style="display:none;" class="lookts-{{look.0}}">
 			<img src="{{look.1.img}}" height="261" />
-			{{look.1.model}}
+			{{look.1.model_name}}
 			</div>
 			{% endfor %}
 		</div>
