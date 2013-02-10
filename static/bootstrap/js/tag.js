@@ -1,4 +1,4 @@
-
+//abc
 
 $(document).ready(function() {
   var tagging = false;
@@ -105,9 +105,11 @@ $(document).ready(function() {
   })
   video[0].addEventListener("timeupdate", function () {
       //  Current time  
-      var vTime = video[0].currentTime;
+//      var vTime = video[0].currentTime;
+      console.log("hey");
       context = null;
       var mindiff = 1;
+/*      var frame_times = [1, 2, 3];
       for (var i in frame_times) {
         var frame = frame_times[i];
         var diff = Math.abs(frame.time-video[0].currentTime);
@@ -115,7 +117,7 @@ $(document).ready(function() {
           mindiff = diff;
           context = frame.id;
         }
-      }
+      }*/
       $('.tag_box').each(function() {
         if ($(this).attr('data-id') == context) {
           $(this).show();

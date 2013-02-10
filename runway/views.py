@@ -88,8 +88,9 @@ def sample_preso(request, workspace_index, preso_index):
     99: {"num": 12, "img":"/media/elle-saint-laurent-spring-2013-rtw-13-de-lg.jpg", 
          "model_name": "Julia Nobis", "photographer": "Alessandro Lucioni"}}
     looks_tuples = tuple([(k, v) for k, v in looks.items()])
-
-    return {"looks": looks_tuples}
+    looks_timestamps = json.dumps(sorted([k for k,v in looks.items()]))
+    return {"looks": looks_tuples,
+            "timestamps": looks_timestamps}
 
 @render_with('media_item.html')
 def media_item(request, workspace_index, mi_index):
