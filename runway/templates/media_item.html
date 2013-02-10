@@ -22,9 +22,9 @@
 	<script type='text/javascript' src='/static/bootstrap/js/tag.js'></script>
     <script type='text/javascript'>
         var workspace_id = {{workspace_id}};
-        var user_id = {{user_id.pk}};
-        var media_item_id = {{media_item.id}};
-        var frame_times = {{frame_times|safe}}
+        var user_id = 1;
+        var media_item_id = 1;
+        var frame_times = "[1,2,3]";
     </script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -70,7 +70,7 @@
         <div class="row">
 	        <div id="video_box" class="span7">
 	            <video width="500" height="480" id="video" controls>
-	                <source src="{{ MEDIA_URL }}{{ media_item.media_file}}" type="video/mp4"/>
+	                <source src="{{ MEDIA_URL }}p1020451.mov" type="video/mp4"/>
 	            </video>
 	            <div id="new_tag"></div>
 	        </div>

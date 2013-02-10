@@ -98,8 +98,8 @@ def media_item(request, workspace_index, mi_index):
 #                    for frame_time in frame_times])
 
     return {
-        "workspace_id": 0,
-        "user_id": None,
+        "workspace_id": 1,
+        "user_id": 1,
         "sample_preso": None,
         "media_item": None,
         "frame_times": None
