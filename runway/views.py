@@ -86,23 +86,23 @@ def sample_preso(request, workspace_index, preso_index):
 
 @render_with('media_item.html')
 def media_item(request, workspace_index, mi_index):
-    user_profile = request.user.get_profile()
-    member = mw_models.WorkspaceMembership.objects.filter(user_profile=user_profile, workspace=workspace_index)
-    if not len(member):
-        return HttpResponse("Not your workspace")
-    media_item = mw_models.MediaItem.objects.get(pk=mi_index)
-    sample_preso = media_item.sample_presentation
+#    user_profile = request.user.get_profile()
+#    member = mw_models.WorkspaceMembership.objects.filter(user_profile=user_profile, workspace=workspace_index)
+#    if not len(member):
+#        return HttpResponse("Not your workspace")
+#    media_item = mw_models.MediaItem.objects.get(pk=mi_index)
+#    sample_preso = media_item.sample_presentation
 
-    frame_times = mw_models.VideoFrameContext.objects.filter(media_item=media_item)
-    frame_times = json.dumps([{"id": frame_time.id, "time": frame_time.frame_time} \
-                    for frame_time in frame_times])
+#    frame_times = mw_models.VideoFrameContext.objects.filter(media_item=media_item)
+#    frame_times = json.dumps([{"id": frame_time.id, "time": frame_time.frame_time} \
+#                    for frame_time in frame_times])
 
     return {
-        "workspace_id": workspace_index,
-        "user_id": user_profile,
-        "sample_preso": sample_preso,
-        "media_item": media_item,
-        "frame_times": frame_times
+        "workspace_id": 0,
+        "user_id": None,
+        "sample_preso": None,
+        "media_item": None,
+        "frame_times": None
     }
 
 
