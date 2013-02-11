@@ -63,11 +63,11 @@ def index(request):
 @render_with('sample_preso2.html')
 def sample_preso(request, workspace_index, preso_index):
     looks =     {
-    2: {"num": 1, "img":"/media/elle-saint-laurent-spring-2013-rtw-01-de-lg.jpg", 
+    14: {"num": 1, "img":"/media/elle-saint-laurent-spring-2013-rtw-01-de-lg.jpg", 
         "model_name": "Julia Nobis", "photographer": "Alessandro Lucioni"},
-    4: {"num": 2, "img":"/media/elle-saint-laurent-spring-2013-rtw-03-de-lg.jpg", 
+    20: {"num": 2, "img":"/media/elle-saint-laurent-spring-2013-rtw-03-de-lg.jpg", 
          "model_name": "Melissa Stasiuk", "photographer": "Alessandro Lucioni"},
-    6: {"num": 3, "img":"/media/elle-saint-laurent-spring-2013-rtw-04-de-lg.jpg", 
+    28: {"num": 3, "img":"/media/elle-saint-laurent-spring-2013-rtw-04-de-lg.jpg", 
          "model_name": "Edie Campbell", "photographer": "Alessandro Lucioni"},
     36: {"num": 4, "img":"/media/elle-saint-laurent-spring-2013-rtw-06-de-lg.jpg", 
          "model_name": "Georgia Hilmer", "photographer": "Alessandro Lucioni"},
